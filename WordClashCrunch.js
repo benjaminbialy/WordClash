@@ -1,3 +1,4 @@
+function callDictionariesAPI(){
 // for loop to fetch first word, then second 
 for(let i=1;i<3;i++){
     // gets the relevant words API response
@@ -9,5 +10,6 @@ for(let i=1;i<3;i++){
          // stores data in form of JSON
         var data = await response.json();
         }
-    getAPIdata(api_url)
+    getAPIdata(api_url);
 }
+;}
