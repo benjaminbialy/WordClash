@@ -14,7 +14,7 @@ for(let i=1;i<3;i++){
         // stores data in form of JSON
         var data = await response.json();
         // finds the respective paragraph, then pushes the JSON file data in
-        var p = document.getElementById("Definition"+i)
+        var p = document.getElementById("Definition"+i);
         p.innerHTML=JSON.stringify(data);
         }
 // makes the API call for the i word
