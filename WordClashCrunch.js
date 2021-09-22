@@ -16,11 +16,11 @@ for(let i=1;i<3;i++){
         // finds the respective paragraph, then pushes the JSON file data in
         var p = document.getElementById("Definition"+i);
         // clears the paragraph info to allow for reuse
-        p.innerHTML=""
+        p.innerHTML="";
         // loops through the array to find all "meaning" values and places them in the HTML
         for(let j=0;j<data.length;j++){
-            p.innerHTML+=JSON.stringify(data[j].meanings);
-        }
+            p.innerHTML+=JSON.stringify(data[j].meanings[0].definitions[0].definition);
+            }
         }
     // finds the relevant heading and adds the selected word as a title
     var h = document.getElementById("SelectedWord"+i);
