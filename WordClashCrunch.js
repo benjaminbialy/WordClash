@@ -19,7 +19,8 @@ for(let i=1;i<3;i++){
         p.innerHTML="";
         // loops through the array to find all "meaning" values and places them in the HTML
         for(let j=0;j<data.length;j++){
-            p.innerHTML+="Word Class    "+JSON.stringify(data[j].meanings[0].partOfSpeech)+"<br>";
+            var wordclass = (JSON.stringify(data[j].meanings[0].partOfSpeech)).replace('"',"")
+            p.innerHTML+=(wordclass.replace('"',"")).toUpperCase()+"<br>";
             p.innerHTML+="<br>";
             p.innerHTML+="Definition<br>";
             p.innerHTML+="<br>";
