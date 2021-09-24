@@ -18,16 +18,17 @@ for(let i=1;i<3;i++){
         // clears the paragraph info to allow for reuse
         p.innerHTML="";
         // loops through the array to find all "meaning" values and places them in the HTML
-        for(let j=0;j<data.length;j++){
-            var wordclass = (JSON.stringify(data[j].meanings[0].partOfSpeech)).replace('"',"")
-            p.innerHTML+=(wordclass.replace('"',"")).toUpperCase()+"<br>";
-            p.innerHTML+="<br>";
-            p.innerHTML+="Definition<br>";
-            p.innerHTML+="<br>";
-            p.innerHTML+=JSON.stringify(data[j].meanings[0].definitions[0].definition) +"<br>";
-            p.innerHTML+="<br>";
-            }
-        ;}
+        for(var j=0;j<data[0].meanings.length;j++){
+                var wordclass = (JSON.stringify(data[0].meanings[j].partOfSpeech)).replace('"',"")
+                p.innerHTML+=(wordclass.replace('"',"")).toUpperCase()+"<br>";
+                p.innerHTML+="<br>";
+                p.innerHTML+="Definition<br>";
+                p.innerHTML+="<br>";
+                for(var k=0;k<data[0].meanings[j].definitions.length;k++){
+                p.innerHTML+=JSON.stringify(data[0].meanings[j].definitions[k].definition) +"<br>";
+                p.innerHTML+="<br>";}
+                ;}
+            ;}
     // finds the relevant heading and adds the selected word as a title
     var h = document.getElementById("SelectedWord"+i);
     h.innerHTML=input;
