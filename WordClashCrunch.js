@@ -17,13 +17,14 @@ for(let i=1;i<3;i++){
         var p = document.getElementById("Definition"+i);
         // clears the paragraph info to allow for reuse
         p.innerHTML="";
-        // loops through the array to find all "meaning" values and places them in the HTML
+        // loops through the array to find all the "meanings" in the first object of the API call result
         for(var j=0;j<data[0].meanings.length;j++){
                 var wordclass = (JSON.stringify(data[0].meanings[j].partOfSpeech)).replace('"',"")
                 p.innerHTML+=(wordclass.replace('"',"")).toUpperCase()+"<br>";
                 p.innerHTML+="<br>";
                 p.innerHTML+="Definition<br>";
                 p.innerHTML+="<br>";
+                // loops through to display all words within each word class
                 for(var k=0;k<data[0].meanings[j].definitions.length;k++){
                 p.innerHTML+=JSON.stringify(data[0].meanings[j].definitions[k].definition) +"<br>";
                 p.innerHTML+="<br>";}
