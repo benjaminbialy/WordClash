@@ -25,8 +25,8 @@ for(let i=1;i<3;i++){
                 p.innerHTML+="<br>";
                 // loops through to display all words within each word class
                 for(var k=0;k<data[0].meanings[j].definitions.length;k++){
-                p.innerHTML+=JSON.stringify(data[0].meanings[j].definitions[k].definition) +"<br>";
-                p.innerHTML+="<br>";}
+                var definition =(JSON.stringify(data[0].meanings[j].definitions[k].definition)).replace('"',"") +"<br>";
+                p.innerHTML+=definition.replace('"',"")+"<br>";}
                 ;}
             ;}
     // finds the relevant heading and adds the selected word as a title
