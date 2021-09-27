@@ -22,7 +22,6 @@ for(let i=1;i<3;i++){
                 var wordclass = (JSON.stringify(data[0].meanings[j].partOfSpeech)).replace('"',"")
                 p.innerHTML+=(wordclass.replace('"',"")).toUpperCase()+"<br>";
                 p.innerHTML+="<br>";
-                p.innerHTML+="Definition<br>";
                 p.innerHTML+="<br>";
                 // loops through to display all words within each word class
                 for(var k=0;k<data[0].meanings[j].definitions.length;k++){

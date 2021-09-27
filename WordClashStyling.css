@@ -19,3 +19,10 @@ header{
     margin-right: 20%;
     margin-left: 20%;
 }
+.DefinitionContainer{
+    display:flex;
+    flex-direction: row;
+}
+.WordSections{
+    margin: 10%;
+}
