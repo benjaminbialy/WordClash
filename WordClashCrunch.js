@@ -15,20 +15,25 @@ for(let i=1;i<3;i++){
         var data = await response.json();
         // finds the respective paragraph, then pushes the JSON file data in
         var p = document.getElementById("Definition"+i);
-        // clears the paragraph info to allow for reuse
-        p.innerHTML="";
-        // loops through the array to find all the "meanings" in the first object of the API call result
-        for(var j=0;j<data[0].meanings.length;j++){
-                var wordclass = (JSON.stringify(data[0].meanings[j].partOfSpeech)).replace('"',"")
-                p.innerHTML+=(wordclass.replace('"',"")).toUpperCase()+"<br>";
-                p.innerHTML+="<br>";
-                p.innerHTML+="<br>";
-                // loops through to display all words within each word class
-                for(var k=0;k<data[0].meanings[j].definitions.length;k++){
-                var definition =(JSON.stringify(data[0].meanings[j].definitions[k].definition)).replace('"',"") +"<br>";
-                p.innerHTML+=definition.replace('"',"")+"<br>";}
-                ;}
-            ;}
+        // the following if else statement checks for the existence of the word in the dictionary database.
+        if(data.hasOwnProperty("title")==true){
+            p.innerHTML="Sorry, the word you inputted was spelt wrong, try searcing externally for the correct spelling.";
+            }else{
+                    // clears the paragraph info to allow for reuse
+                    p.innerHTML="";
+                    // loops through the array to find all the "meanings" in the first object of the API call result
+                    for(var j=0;j<data[0].meanings.length;j++){
+                            var wordclass = (JSON.stringify(data[0].meanings[j].partOfSpeech)).replace('"',"")
+                            p.innerHTML+=(wordclass.replace('"',"")).toUpperCase()+"<br>";
+                            p.innerHTML+="<br>";
+                            p.innerHTML+="<br>";
+                            // loops through to display all words within each word class
+                            for(var k=0;k<data[0].meanings[j].definitions.length;k++){
+                            var definition =(JSON.stringify(data[0].meanings[j].definitions[k].definition)).replace('"',"") +"<br>";
+                            p.innerHTML+=definition.replace('"',"")+"<br>";}
+                            ;}
+                        ;}
+                    ;}
     // finds the relevant heading and adds the selected word as a title
     var h = document.getElementById("SelectedWord"+i);
     h.innerHTML=input;
