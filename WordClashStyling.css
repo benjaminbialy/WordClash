@@ -27,3 +27,6 @@ header{
 .WordSections{
     margin: 10%;
 }
+#Word1Section,#Word2Section{
+    width:40%;
+}
