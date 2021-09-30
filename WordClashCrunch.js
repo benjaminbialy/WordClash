@@ -38,6 +38,5 @@ for(let i=1;i<3;i++){
     var h = document.getElementById("SelectedWord"+i);
     h.innerHTML=input;
 // makes the API call for the i word
-getAPIdata(api_url);
+getAPIdata(api_url);}
 }
-;}
