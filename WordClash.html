@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>WordClash</title>
-    <link rel="stylesheet" href="WordClashStyling.css">
-</head>
-<nav>
-<a class="site-name" href="https://WordClash.com/">WordClash</a>
-<a href="https://github.com/benjaminbialy/WordClash" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="My GitHub">
-</a>
-</nav>
-<header>
-    <h1 id="flexboxtitle">Welcome to WordClash!</h1>
-    <h4 id ="flexboxsubheading">Scroll down to compare 2 words side by side.</h4>
-</header>
-<body>
-<form>
-<div class="input-fields">
-<label>First Word:</label> 
-<input type="text" name="Word1" id="Word1">
-<label>Second Word:</label> 
-<input type="text" name="Word2" id="Word2">
-</div>
-<input type="button" id = "WordClashButton"value="Word Clash!">
-</form>
-<div class="DefinitionContainer">
-<section id="Word1Section" class="WordSections">
-<h3 id="SelectedWord1"></h3>
-<p id="Definition1"></p>
-</section>
-<section id="Word2Section" class="WordSections">
-<h3 id="SelectedWord2"></h3>
-<p id="Definition2"></p>
-</section>
-</div>
-<script src="WordClashCrunch.js"></script>
-</body>
+    <head>
+        <title>WordClash</title>
+        <link rel="stylesheet" href="WordClashStyling.css">
+    </head>
+    <nav>
+    <a class="site-name" href="https://WordClash.com/">WordClash</a>
+    <a href="https://github.com/benjaminbialy/WordClash" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="My GitHub">
+    </a>
+    </nav>
+    <header>
+        <h1 id="flexboxtitle">Welcome to WordClash!</h1>
+        <h4 id ="flexboxsubheading">Scroll down to compare two words side by side.</h4>
+    </header>
+    <body>
+    <form>
+        <div class="input-fields">
+            <label>First Word:</label> 
+            <input type="text" name="Word1" id="Word1" class="input-fields-spacing">
+            <label>Second Word:</label> 
+            <input type="text" name="Word2" id="Word2" class="input-fields-spacing">
+        </div>
+        <input type="button" id = "WordClashButton"value="Word Clash!">
+    </form>
+    <div class="DefinitionContainer">
+        <section id="Word1Section" class="WordSections">
+            <h3 id="SelectedWord1"></h3>
+            <p id="Definition1"></p>
+        </section>
+        <section id="Word2Section" class="WordSections">
+            <h3 id="SelectedWord2"></h3>
+            <p id="Definition2"></p>
+        </section>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="https://paypal.me/BenjaminBialy" target="_blank" rel="noopener noreferrer">Donate</a></li>
+            <li>Created by Benjamin Bialy</li>
+            <li><a href="mailto:benjamincbialy@gmail.com">Help</a></li>
+        </ul>
+    </footer>
+    <script src="WordClashCrunch.js"></script>
+    </body>
 </html>
