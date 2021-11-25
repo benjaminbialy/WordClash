@@ -1,6 +1,6 @@
 html{
-    color:lightgray;
-    background-color:#203647;
+    color:black;
+    background-color: white;
     font-size: 1.5vw;
 }
 header{
@@ -13,17 +13,33 @@ header{
 }
 .input-fields{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+.input-fields-spacing{
+    margin-left: 2%;
+    margin-right: 2%;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
 }
 #WordClashButton{
     width:60%;
     margin:5% 20% 5% 20%;
+    padding: 1%;
+    background-color: white;
+    font-size: 1.25vw;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
 }
 .DefinitionContainer{
     display:flex;
     flex-direction: row;
     margin:10%;
-    background-color: #203656;
+    background-color: white;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
 }
 .WordSections{
     margin: 10%;
@@ -40,8 +56,11 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 2.5%;
-    background-color: #203656;
+    background-color: white;
     font-size: 2vw;
+    border-color: lightgrey;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
 }
 body{
     margin: 0px;
@@ -51,8 +70,32 @@ img{
     width: 3.5vw;
 }
 .site-name:hover {
-    color:black;
+    color: #D3D3D3;
   }
 img:hover{
     filter:sepia(0%) saturate(5319%) hue-rotate(25deg) brightness(111%) contrast(0%);
+}
+#WordClashButton:hover{
+    background-color: lightgrey;
+}
+li{
+    list-style-type: none;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer{
+    background-color: white;
+    padding: 2.5%;
+    border-color: lightgrey;
+    border-style: solid;
+    border-top-width: thin;
+}
+body{
+    background-color: #F5F6F7;
+}
+.input-fields-spacing:hover{
+    border-color: black;
 }
